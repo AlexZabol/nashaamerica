@@ -1,0 +1,166 @@
+// Common Slider styles
+
+
+.sliderBlock {
+	background: none;
+	padding: 0px 0px 0px 0px;
+	margin-bottom: 10px;
+	height: 310px;
+	overflow: hidden;
+	.sliderNav {
+		float: right;
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		li {
+			padding: 0px 0px 3px 0px;
+			margin: 0px;
+			a {
+				font-size: 16px;
+				width: 250px;
+				height: 75px;
+				display: block;
+				padding: 0px 00px;
+				text-decoration: none;
+				font-weight: bold;
+				&:hover {
+					.Arrow {
+						display: none;
+					}
+				}
+				.Arrow {
+					width: 19px;
+					height: 75px;
+					position: absolute;
+					margin-left: -18px;
+					z-index: 10;
+					display: none;
+				}
+				.Tit, .Text {
+					font-family: @Slide_FontFamily;
+					font-weight: 500;
+				}
+				.Tit {
+					font-size: 20px;
+					text-transform: uppercase;
+					padding: 10px 10px 0px 10px;
+				}
+				.Text {
+					padding: 3px 0 3px 10px !important;
+					font-size: 12px;
+					padding: 0px 10px;
+				}
+			}
+			&.activeSlide a {
+				.Arrow {
+					display: block;
+				}
+
+			}
+		}
+	}
+	.sliderImages {
+		float: left;
+		img {
+			width: 721px;
+			height: 309px;
+		}
+		.BlockContent {
+			position: absolute;
+			background: url({$pathImages}gk/slider_content_block_bg.png);
+			width: 450px;
+			height: 265px;
+			margin: 25px 0px 0px 25px;
+			color: #000000;
+			.Tit, .Text, .highlight, li, span {
+				font-family: @Slide_FontFamily;
+			}
+			.Text, li {
+				font-size: 14px;
+				font-weight: 400;
+			}
+			.Tit {
+				font-weight: 700;
+				font-size: 20px;
+				text-transform: uppercase;
+				padding-bottom: 5px;
+			}
+			.highlight {
+				font-weight: 700;
+			}
+			ul {
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
+				li {
+					background: url({$pathImages}gk/li_list.png) top left no-repeat;
+					padding: 0px 0px 0px 30px;
+					margin-top: 10px;
+				}
+			}
+		}
+		.SliderBtnPlaceholder {
+			position: absolute;
+			width: 230px;
+			height: 50px;
+			display: block;
+			margin: 244px 0px 0px 485px;
+			text-align: center;
+		}
+	}
+}
+
+
+
+// Green Card Slider Styles
+
+
+.GK.sliderBlock {
+	.sliderNav {
+		li {
+			a {
+				background: @GK-light;
+				&:hover {
+					background: darken(@GK-light, 10%);
+					.Tit {
+						// color: white;
+						// text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+					}
+					.Text {
+						// color: white;
+					}
+				}
+				.Arrow {
+					background: url({$pathImages}sliderNavArrow.png);
+				}
+				.Tit {
+					color: @GK-dark;
+					text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
+				}
+				.Text {
+					color: #585858;
+				}
+			}
+			&.activeSlide a {
+				background: @GK-dark;
+				.Tit {
+					color: white;
+					text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+				}
+				.Text {
+					color: @GK-light;
+				}
+			}
+		}
+	}
+	.sliderImages {
+		.BlockContent {
+			.Tit, .highlight {
+				color: @GK-dark;
+				text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
+			}
+		}
+	}
+}
+
+

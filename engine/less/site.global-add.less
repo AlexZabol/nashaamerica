@@ -1,0 +1,110 @@
+// Variables
+@import "variables.less";
+@import "variables-add.less";
+// Mixins
+@import "mixins/vendor-prefixes.less";
+@import "mixins/tab-focus.less";
+@import "mixins/opacity.less";
+@import "mixins/buttons.less";
+@import "mixins/grid.less";
+@import "mixins/forms.less";
+// Styles
+@import "slider.less";
+@import "buttons.less";
+@import "wells";
+@import "forms";
+
+
+.SimpleBlock {
+	.Title {
+		padding: 10px;
+		font-family: @Roboto_FontFamily;
+		font-weight: 400;
+		font-size: 20px;
+		border-top-left-radius: @border-radius-large;
+		border-top-right-radius: @border-radius-large;
+	}
+	.Text {
+		.well;
+		padding: 10px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+
+.HeaderBlock_GK {
+	background: url({$pathImages}gk-headerblock-bg.jpg) repeat-x;
+	.GlobalSize {
+		background: url({$pathImages}gk-globalsize-bg.jpg);
+	}
+}
+
+.MainBlock .ContentBlock {
+	background: #efefef;
+	h1 {
+		// display: block;
+		// background-color:#57747a; 
+		// .well;
+		// .well-sm;
+		font-family: @Condensed_FontFamily;
+		color: #555555;
+		font-size: 22px;	
+
+	}
+	h2 {
+		font-family: @Condensed_FontFamily;
+		color: #333333;
+		font-size: 32px;	
+	}
+}
+
+.NewsList .NewsItem { 
+	.SmallData {
+		width: 660px;
+	}
+	.Title {
+		margin: 10px 10px 20px 10px;
+		font-family: @Condensed_FontFamily;
+		font-size: 32px;
+		line-height: 110%;
+		color: #333333;
+		text-shadow: 1px 1px 0 white;
+	}
+	.clear {
+		height: 20px !important;
+	}
+}
+
+.MainBlock .ContentBlock .NewsListSimple a.Title {
+	display: block;
+	font-family: @Condensed_FontFamily;
+	font-size: 24px;
+	padding-bottom:  15px;
+}
+
+.FooterBlock .Box .Title {
+	font-family: @Roboto_FontFamily !important;
+	font-weight: 400;
+}
+
+.btn {
+	position: relative;
+}
+
+// a.btn { 
+// 	display: block;
+// }
+
+.fa-abs {
+	display: block;
+	position: absolute;
+	right: 10px;
+}
+
+.input-sm {
+	height: 25px;
+}
+
+select.input-sm {
+	height: 30px;
+}
